@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'MAID - Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components/jobs.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="home.html" class="nav-brand">D'MAID</a>
+        <div class="nav-links">
+            <a href="post-job.html" class="nav-link">Post</a>
+            <a href="log.html" class="nav-link">Log</a>
+            <a href="chat.html" class="nav-link">Chat</a>
+            <a href="#" class="nav-link">Logout</a>
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <span>User</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Ongoing Job Section -->
+        <section class="ongoing-job">
+            <h2 class="section-title">Ongoing Job</h2>
+            <div class="ongoing-job-card">
+                <div class="ongoing-job-header">
+                    <div class="job-info">
+                        <h3 class="job-title">Ongoing Job</h3>
+                        <p class="job-meta">Time - Location</p>
+                    </div>
+                    <button class="delete-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="job-card-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </section>
+
+        <!-- All Job Listing Section -->
+        <section>
+            <h2 class="section-title">All Job Listing</h2>
+            <div class="job-grid">
+                <!-- Job Card 1 -->
+                <div class="job-card">
+                    <h3 class="job-card-title">Example Job</h3>
+                    <p class="job-card-location">Location</p>
+                    <p class="job-card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis ligula, eleifend at amet euismod
+                        nec, sodales non nisi. Proin...
+                    </p>
+                    <button class="job-card-button">Accept</button>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card">
+                    <h3 class="job-card-title">Example Job</h3>
+                    <p class="job-card-location">Location</p>
+                    <p class="job-card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis ligula, eleifend at amet euismod
+                        nec, sodales non nisi. Proin...
+                    </p>
+                    <button class="job-card-button">Accept</button>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card">
+                    <h3 class="job-card-title">Example Job</h3>
+                    <p class="job-card-location">Location</p>
+                    <p class="job-card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis ligula, eleifend at amet euismod
+                        nec, sodales non nisi. Proin...
+                    </p>
+                    <button class="job-card-button">Accept</button>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card">
+                    <h3 class="job-card-title">Example Job</h3>
+                    <p class="job-card-location">Location</p>
+                    <p class="job-card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis ligula, eleifend at amet euismod
+                        nec, sodales non nisi. Proin...
+                    </p>
+                    <button class="job-card-button">Accept</button>
+                </div>
+
+                <!-- Job Card 5 -->
+                <div class="job-card">
+                    <h3 class="job-card-title">Example Job</h3>
+                    <p class="job-card-location">Location</p>
+                    <p class="job-card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis ligula, eleifend at amet euismod
+                        nec, sodales non nisi. Proin...
+                    </p>
+                    <button class="job-card-button">Accept</button>
+                </div>
+
+                <!-- Job Card 6 -->
+                <div class="job-card">
+                    <h3 class="job-card-title">Example Job</h3>
+                    <p class="job-card-location">Location</p>
+                    <p class="job-card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris turpis ligula, eleifend at amet euismod
+                        nec, sodales non nisi. Proin...
+                    </p>
+                    <button class="job-card-button">Accept</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Handle job card accept button clicks
+        document.querySelectorAll('.job-card-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const jobCard = this.closest('.job-card');
+                const jobTitle = jobCard.querySelector('.job-card-title').textContent;
+                if (confirm(`Do you want to accept "${jobTitle}"?`)) {
+                    // Here you would typically handle the job acceptance
+                    console.log(`Accepted job: ${jobTitle}`);
+                }
+            });
+        });
+
+        // Handle ongoing job deletion
+        document.querySelector('.delete-btn').addEventListener('click', function() {
+            if (confirm('Do you want to delete this ongoing job?')) {
+                const ongoingJobCard = this.closest('.ongoing-job-card');
+                ongoingJobCard.remove();
+            }
+        });
+    </script>
+</body>
+</html>

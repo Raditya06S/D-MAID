@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'MAID - Log</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components/jobs.css">
+    <style>
+        /* Additional styles specific to log page */
+        .log-section {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .log-title {
+            color: #8B4513;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .log-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        .log-table th,
+        .log-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .log-table th {
+            font-weight: 500;
+            color: #8B4513;
+            background-color: var(--primary-bg);
+        }
+
+        .log-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .status-ongoing {
+            background-color: #FFF3CD;
+            color: #856404;
+        }
+
+        .status-completed {
+            background-color: #D4EDDA;
+            color: #155724;
+        }
+
+        .status-waiting {
+            background-color: #FFE5E5;
+            color: #721C24;
+        }
+
+        @media (max-width: 768px) {
+            .log-section {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .log-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .log-table th,
+            .log-table td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="home.html" class="nav-brand">D'MAID</a>
+        <div class="nav-links">
+            <a href="post-job.html" class="nav-link">Post</a>
+            <a href="log.html" class="nav-link">Log</a>
+            <a href="chat.html" class="nav-link">Chat</a>
+            <a href="#" class="nav-link">Logout</a>
+            <a href="profile.html" class="user-profile">
+                <div class="user-avatar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <span>User</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Job Taken Section -->
+        <section class="log-section">
+            <h2 class="log-title">Job Taken</h2>
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Job</th>
+                        <th>Salary</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-05-15</td>
+                        <td>Cleaning</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-ongoing">Ongoing</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-10</td>
+                        <td>Cooking</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-04</td>
+                        <td>Laundry</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-04-19</td>
+                        <td>Packing</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Assignment List Section -->
+        <section class="log-section">
+            <h2 class="log-title">Assignment List</h2>
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Job</th>
+                        <th>Salary</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-05-15</td>
+                        <td>Packing</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-waiting">Waiting</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-10</td>
+                        <td>Laundry</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-04</td>
+                        <td>Cooking</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>2025-04-19</td>
+                        <td>Cleaning</td>
+                        <td>Rp 123.456,00</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
